@@ -1,0 +1,7 @@
+{
+  "name": "DIP",
+  "integrations": {
+    "cordova": {}
+  },
+  "type": "angular"
+}
