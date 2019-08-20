@@ -2,37 +2,42 @@
 
 
     --background: url('../../assets/img/Fundo/Degrade/Degrade_UtilizadoAPP.png');
-    width: 414px;
+    width: 398px;
     height:300px;
-    background-size: 300px 600px;
     background-position: center center;
+    font-family: Merriweather Sans;
     }
 
-    .icones{
-        width:110px;
-        height:110px;
-        box-shadow: 4px 9px 15px rgba(30, 30, 54, 0.438);
-        border-radius: 100px;
-        
+    .logo{
+        margin-top:54px;
+        margin-left:93px;
     }
-
     .bolhas{
-        width:35px;
-        height:30px;
-         
+        width: 35px;
+        height: 35px;
+        margin-left:35px;
     }
 
-    .bolhas2{
-        width:65px;
-        height:60px;
-         
+    .icone-prof{
+ 
+        margin-left:35px;
     }
-       .table{
-        border: 0px solid;
+    
+    .prof1{
+        
+        margin-left: 55px;
+    }
+    .bolhas1{
+        width: 35px;
+        height: 35px;
+        margin-left:210px;
+    }
 
-       }
+    .icone-alu{
+ 
+        margin-left:235px;
+    }
 
-       .text{
-        font-family: "Varela Round";
-        font-size: 18px;
-       }
+    .alu1{
+        margin-left: 265px;
+    }

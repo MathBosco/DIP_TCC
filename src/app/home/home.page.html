@@ -1,51 +1,33 @@
 <ion-header>
-    <link href="https://fonts.googleapis.com/css?family=Varela+Round&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Merriweather+Sans&display=swap" rel="stylesheet">
+    
 </ion-header>
 
 <ion-content class ="background" >
-  <div class="ion-padding" >
-      
-
-    <table width="330" height="400" class="table" cellspacing="0" cellpadding="0">
-      <tr>
-          <td colspan="2" width="100" heigh="130" class="table"> 
-              <p text-center>  
-                  <img  width = "190" height = "140"  src = "assets\img\Logo\Titulo.png"/>  
-              </p>
-          </td>
-      </tr>
-
-     
-      <tr>
-        <td colspan="1" width="137" height="130" class="table">
-              <p text-center> 
-
-                  <img class = "bolhas" src="assets\img\Fundo\Bolha1.png"/>
-                  <br>
-                
-                  <img class = "icones" routerLink= "/lg-prof" routerDirection="root" src = "assets\img\Icones\Professor-Icon.png"/> 
-                  <ion-text color = "light" class="text">PROFESSOR</ion-text>
-                
-              </p>        
-        </td>
-
-        <td colspan="1" width="137" height="130" class="table">
-        </td>
-      </tr>
-
-      <tr>
-        <td colspan="1" width="137" height="130" class="table">
-          </td>
-
-          <td colspan="1" width="137" height="130" class="table">
-                <p text-center> 
-                    <img class = "bolhas" src="assets\img\Fundo\Bolha2.png"/>
-                    <br>
-                    <img class = "icones" src = "assets\img\Icones\Aluno-Icon.png"/> 
-                    <ion-text color = "light" class="text">ALUNO</ion-text>
-                </p>    
-            </td>
-          </tr>
-</table>
+    
+  <div class="logo">    
+        <img src = "assets\img\Logo\Titulo.png"  width ="190 " height="140"/>
   </div>
+ <br>
+    <div class="bolhas">
+      <img class = "bolhas" src="assets\img\Fundo\Bolha1.png"/>
+    </div>
+<br>
+  <div class="icone-prof">
+      <img class = "icones" routerLink= "/lg-prof" routerDirection="root" src = "assets\img\Icones\Professor-Icon.png" width ="110 " height="110"/> 
+  </div>
+
+  <div class="prof1">
+      <ion-text color = "light">Professor</ion-text>
+  </div>
+  <div class="bolhas1">
+      <img class = "bolhas" src="assets\img\Fundo\Bolha2.png" />
+  </div>   
+  <div class="icone-alu">
+      <img class = "icones" routerLink= "/lg-alun" routerDirection="root" src = "assets\img\Icones\Aluno-Icon.png"  width ="110 " height="110"/> 
+  </div>
+  <div class="alu1">
+      <ion-text color = "light" >Aluno</ion-text>
+  </div>
+  
 </ion-content>

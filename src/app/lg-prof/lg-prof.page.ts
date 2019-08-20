@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 
+
 @Component({
   selector: 'app-lg-prof',
   templateUrl: './lg-prof.page.html',

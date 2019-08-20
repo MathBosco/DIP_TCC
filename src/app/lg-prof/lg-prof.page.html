@@ -1,34 +1,48 @@
 <ion-header>
+        <link href="https://fonts.googleapis.com/css?family=Merriweather+Sans&display=swap" rel="stylesheet">
 </ion-header>
 
-<ion-content class="background">
+<ion-content class ="background" >
 
-  <table width="357" height="400" class="table" cellspacing="0" cellpadding="0">
-    <tr>
-        <td colspan="2" width="100" heigh="130" class="table"> 
-            <p text-center>  
-                <img  width = "190" height = "140"  src = "assets\img\Logo\Titulo.png"/>  
-            </p>
-        </td>
-    </tr>
-    <tr>
-        <td colspan="1" width="330" height="200" class="table">
-              <p text-center> 
+        <div class="voltar">
+                <img src = "assets\img\Icones\back-arrow.png" routerLink= "/home" routerDirection="root"  width ="30" height="30"/>
+        </div>
 
-                  <img class = "bolhas" src="assets\img\Fundo\Bolha1.png"/>
+        <div class="logo">    
+                <img src = "assets\img\Logo\Titulo.png"  width ="190 " height="140"/>
+        </div>
+        
                   <br>
-                
-                  <img class = "icones" routerLink= "/lg-prof" routerDirection="root" src = "assets\img\Icones\Professor-Icon.png"/> 
-                  <br>
-                  <ion-text color = "light" class="text">PROFESSOR</ion-text>
-                  <br>
-                  
-                  <ion-item class="ion-margin-center" lines="none">
-                    
-                    <ion-input value="" placeholder="Login" ></ion-input>
-                    
-                  </ion-item>  
-              </p>        
-        </td>
-    </table>
+
+        <div class="prof">
+                <img src = "assets\img\Icones\Professor-Icon.png"  width ="100 " height="100"/>
+        </div>
+
+        <div class="prof1">
+        <ion-text color = "light">Professor</ion-text>
+        </div>
+
+                 <br>
+
+        <div >
+          <ion-item class="user">
+             <ion-input type="text" placeholder="Login"></ion-input>
+          </ion-item>
+         <br>
+          <ion-item class="password">
+             <ion-input type="password" placeholder="Senha"></ion-input>
+          </ion-item>
+        <br><br>
+        </div>
+        
+        
+        <!-----Botão---->
+        <div>  
+            <ion-button type="Submit" class="button1"> 
+                Entrar 
+            </ion-button>
+        </div>
+
+        
 </ion-content>
+
