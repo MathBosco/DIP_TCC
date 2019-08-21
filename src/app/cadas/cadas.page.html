@@ -18,21 +18,21 @@
 <br>
   <div>
       <ion-item class="RA">
-<ion-input type="text" placeholder="RA"></ion-input>
+<ion-input type="text" placeholder="RA" [(ngModel)]="cadastroForm.ra"></ion-input>
 </ion-item>
 </div>
 
 <br>
   <div>
       <ion-item class="Nome ">
-<ion-input type="text" placeholder="NOME COMPLETO"></ion-input>
+<ion-input type="text" placeholder="NOME COMPLETO" [(ngModel)]="cadastroForm.nome"></ion-input>
 </ion-item>
 </div>
 
 <br>
 <div>
     <ion-item class="Email">
-<ion-input type="text" placeholder="EMAIL"></ion-input>
+<ion-input type="text" placeholder="EMAIL" [(ngModel)]="cadastroForm.email"></ion-input>
 </ion-item>
 </div>
 
@@ -46,27 +46,22 @@
 <br>
 <div>
     <ion-item class="Senha">
-<ion-input type="text" placeholder="SENHA"></ion-input>
+<ion-input type="text" placeholder="SENHA" [(ngModel)]="cadastroForm.password"></ion-input>
 </ion-item>
 </div>
 
 <br>
 <div>
     <ion-item class="Senha1">
-<ion-input type="text" placeholder="CONFIRMAR SENHA"></ion-input>
+<ion-input type="text" placeholder="CONFIRMAR SENHA" ></ion-input>
 </ion-item>
 </div>
 
 <br>
-<div>
-    <ion-item class="idade">
-<ion-input type="text" placeholder="IDADE"></ion-input>
-</ion-item>
-</div>
-<br>
+
 
 <div>  
-    <ion-button type="Submit" class="button1" > 
+    <ion-button type="Submit" class="button1" (click)="criarNovaConta()"> 
         Cadastrar
     </ion-button>
 </div>

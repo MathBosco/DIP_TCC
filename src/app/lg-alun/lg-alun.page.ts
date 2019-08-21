@@ -1,4 +1,9 @@
 import { Component, OnInit } from '@angular/core';
+import {Router} from "@angular/router";
+import { AuthProvider } from '../providers/auth';
+
+
+
 
 @Component({
   selector: 'app-lg-alun',
@@ -7,7 +12,23 @@ import { Component, OnInit } from '@angular/core';
 })
 export class LgAlunPage implements OnInit {
 
-  constructor() { }
+  loginForm ={
+    email: '',
+    password: '',
+  }
+  constructor(
+    private authProvider: AuthProvider
+  ) {}
+
+ fazerLogin(){
+   this.authProvider.login(this.loginForm)
+   .then((res) => {
+     console.log("DEU CERTO PORRA");
+   })
+   .catch((err)=>{
+     console.log(err);
+       })
+ }
 
   ngOnInit() {
   }
