@@ -1,22 +1,58 @@
 <ion-header>
 </ion-header>
 
+<!--Seta de Voltar-->
 <ion-content class="background">
-
-<div class="card" >
-    <ion-card>
-        <img src="assets\img\Logo\Titulo.png" />
-        <ion-card-header>
-          <ion-card-subtitle>Destination</ion-card-subtitle>
-          <ion-card-title>Madison, WI</ion-card-title>
-        </ion-card-header>
-        <ion-card-content>
-          Founded in 1829 on an isthmus between Lake Monona and Lake Mendota, Madison was named the capital of the Wisconsin Territory in 1836.
-        </ion-card-content>
-      </ion-card>
-
-  
+<div class="voltar">
+  <img src = "assets\img\Icones\back-arrow.png" routerLink= "/home" routerDirection="root"  width ="30" height="30"/>
 </div>
 
+<!--Avaliações-->
+<div class="avaliacao" >
+      <ion-card color="light"> 
+        <ion-card-header color="primary">
+          <ion-title>Availiações ></ion-title>
+        </ion-card-header>
+
+      <ion-card-content>
+        <table width="360px" cellspacing="0" cellspadding="" >
+          <tr>
+            <td colspan="" width="180px">
+              <br>
+              <img class="icon" src="assets\img\Icones\pie-charts.png"> 
+            </td>  
+            <td colspan="" width="180px">
+              <br>
+                <img class="icon" src="assets\img\Icones\bar-chart.png"> 
+              </td>  
+          </tr>
+        </table>
+      </ion-card-content>  
+      </ion-card>
+</div>
+
+<!--Planejamento-->
+<div class="avaliacao" >
+    <ion-card color="light"> 
+      <ion-card-header color="primary">
+        <ion-title>Planejamento ></ion-title>
+      </ion-card-header>
+
+    <ion-card-content>
+      <table width="360px" cellspacing="0" cellspadding="" >
+        <tr>
+          <td colspan="" width="180px">
+            <br>
+            <img class="icon" src="assets\img\Icones\calendar.png"> 
+          </td>  
+          <td colspan="" width="180px">
+            <br>
+              <img class="icon" src="assets\img\Icones\clipboard.png"> 
+            </td>  
+        </tr>
+      </table>
+    </ion-card-content>  
+    </ion-card>
+</div>
 
 </ion-content>
