@@ -8,6 +8,9 @@ const routes: Routes = [
   { path: 'cadas', loadChildren: './cadas/cadas.module#CadasPageModule' },
   { path: 'home-prof', loadChildren: './home-prof/home-prof.module#HomeProfPageModule' },
   { path: 'planeja-prof', loadChildren: './planeja-prof/planeja-prof.module#PlanejaProfPageModule' },
+  { path: 'home-alun', loadChildren: './home-alun/home-alun.module#HomeAlunPageModule' },
+  { path: 'aula-alu', loadChildren: './aula-alu/aula-alu.module#AulaAluPageModule' },
+  { path: 'plan-prof', loadChildren: './plan-prof/plan-prof.module#PlanProfPageModule' },
 
 ];
 

@@ -29,36 +29,28 @@
     margin-top:20px;
   }
 
-  .avaliacao{
-    
-    margin-top: 0px;
+  .aula{
     width: 360px;
     height: 80px;
-
-  }
-
-  .planejamento{
     
-    margin-top: 0px;
-    width: 360px;
-    height: 250px;
-
   }
 
-
+ 
   .icon{
 
     width:90px;
     height:90px;
   }
 
+  .header{
+      height:40px;
+  }
+
+  .title{
+      height:5px;
+      font-size: 14px;
+  }
+
   .pla{
     box-shadow: 0px 7px 10px rgba($color: #b3afaf, $alpha: 1.0);
-    border-radius: 5px;
   }
-
-  .ava{
-    box-shadow: 0px 7px 10px rgba($color: #b3afaf, $alpha: 1.0);
-  }
-
- 
