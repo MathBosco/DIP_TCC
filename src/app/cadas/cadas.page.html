@@ -16,55 +16,62 @@
       <ion-text color = "light">Aluno</ion-text>
       </div>
 <br>
-  <div>
-      <ion-item class="RA">
-<ion-input type="text" placeholder="RA" [(ngModel)]="cadastroForm.ra"></ion-input>
-</ion-item>
+
+<!--Formulário-->
+<form [formGroup]="formGrupo" (submit)="Cadastrar()">
+<div>
+    <ion-item class="RA">
+        <ion-input  placeholder="RA" inputmode="text" formControlName="Ra"></ion-input>
+    </ion-item>
 </div>
 
 <br>
-  <div>
-      <ion-item class="Nome ">
-<ion-input type="text" placeholder="NOME COMPLETO" [(ngModel)]="cadastroForm.nome"></ion-input>
-</ion-item>
+
+<div>
+    <ion-item class="Nome">
+        <ion-input  placeholder="NOME COMPLETO" inputmode="text" formControlName="Nome"></ion-input>
+    </ion-item>
 </div>
 
 <br>
+
 <div>
     <ion-item class="Email">
-<ion-input type="text" placeholder="EMAIL" [(ngModel)]="cadastroForm.email"></ion-input>
-</ion-item>
+        <ion-input  placeholder="EMAIL" inputmode="text" formControlName="Email"></ion-input>
+    </ion-item>
 </div>
 
 <br>
+
 <div>
     <ion-item class="Email1">
-<ion-input type="text" placeholder="CONFIRMAR EMAIL"></ion-input>
-</ion-item>
+        <ion-input  placeholder="CONFIRMAR EMAIL" inputmode="text" formControlName="EmailConfirm"></ion-input>
+    </ion-item>
 </div>
 
 <br>
+
 <div>
     <ion-item class="Senha">
-<ion-input type="text" placeholder="SENHA" [(ngModel)]="cadastroForm.password"></ion-input>
-</ion-item>
+        <ion-input  placeholder="SENHA" inputmode="text" formControlName="Senha"></ion-input>
+    </ion-item>
 </div>
 
 <br>
+
 <div>
     <ion-item class="Senha1">
-<ion-input type="text" placeholder="CONFIRMAR SENHA" ></ion-input>
-</ion-item>
+        <ion-input  placeholder="CONFIRMAR SENHA" inputmode="text" formControlName="SenhaConfirm" ></ion-input>
+    </ion-item>
 </div>
 
 <br>
 
-
+<!--Botão Cadastrar-->
 <div>  
-    <ion-button type="Submit" class="button1" (click)="criarNovaConta()"> 
+    <ion-button type="Submit" class="button1"> 
         Cadastrar
     </ion-button>
 </div>
-
-
+</form>
 </ion-content>
