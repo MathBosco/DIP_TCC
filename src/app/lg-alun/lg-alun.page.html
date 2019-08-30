@@ -22,15 +22,17 @@
     <ion-text color = "light">Aluno</ion-text>
     </div>
 
-             <br>
-
+    <br>
+    <!--Formulário-->
+    <form [formGroup] = "formGrupoAlunoLogin" (submit)= "LoginAluno()">
     <div >
       <ion-item class="user">
-         <ion-input type="text" placeholder="Login" [(ngModel)]="loginForm.email"></ion-input>
+         <ion-input type="text" placeholder="RA" inputmode="text" formControlName="Ra_l"></ion-input>
       </ion-item>
      <br>
+
       <ion-item class="password">
-         <ion-input type="password" placeholder="Senha" [(ngModel)]="loginForm.password"></ion-input>
+         <ion-input type="password" placeholder="Senha" inputmode="text" formControlName="Senha_l"></ion-input>
       </ion-item>
     <br><br>
     </div>
@@ -38,7 +40,7 @@
     
     <!-----Botão---->
     <div>  
-        <ion-button  type="Submit" class="button1" (click)="fazerLogin()"  routerLink= "/home-alun" routerDirection="root"> 
+        <ion-button  type="Submit" class="button1"  routerLink= "/home-alun" routerDirection="root"> 
             Entrar 
         </ion-button>
     </div>
@@ -49,5 +51,5 @@
         </ion-button>
     </div>
 
-    
+</form>
 </ion-content>

@@ -1,7 +1,9 @@
+import { CadasPage } from './../cadas/cadas.page';
+import { FormGroup, FormBuilder } from '@angular/forms';
 import { Component, OnInit } from '@angular/core';
-import {Router} from "@angular/router";
-import { AuthProvider } from '../providers/auth';
-
+import {Router, RouterLink} from "@angular/router";
+import { wtfEnabled } from '@angular/core/src/profile/profile';
+import { typeWithParameters } from '@angular/compiler/src/render3/util';
 
 
 
@@ -12,25 +14,26 @@ import { AuthProvider } from '../providers/auth';
 })
 export class LgAlunPage implements OnInit {
 
-  loginForm ={
-    email: '',
-    password: '',
-  }
-  constructor(
-    private authProvider: AuthProvider
-  ) {}
+formGrupoAlunoLogin : FormGroup;
 
- fazerLogin(){
-   this.authProvider.login(this.loginForm)
-   .then((res) => {
-     console.log("DEU CERTO PORRA");
-   })
-   .catch((err)=>{
-     console.log(err);
-       })
- }
+constructor(private formConstrutor :FormBuilder, private CadasPage : CadasPage) {} 
 
   ngOnInit() {
+    console.log(this.CadasPage.formGrupo);
+    this.formGrupoAlunoLogin = this.formConstrutor.group({
+      Ra_l : [''] ,
+      Senha_l : ['']
+      
+    });
+    
   }
+
+  private LoginAluno(){
+
+    const RA_l = this.formGrupoAlunoLogin.get('Ra_l').value;
+    const Senha_l = this.formGrupoAlunoLogin.get('Senha_l').value;
+    
+  }
+    
 
 }

@@ -1,3 +1,4 @@
+import { CadasPage } from './cadas/cadas.page';
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { RouteReuseStrategy } from '@angular/router';
@@ -15,6 +16,8 @@ import {AngularFirestoreModule} from 'angularfire2/firestore';
 import {AngularFireAuthModule} from 'angularfire2/auth';
 import {firebaseConfig} from './Configs/firebase';
 import {AuthProvider} from './providers/auth';
+
+
 
 @NgModule({
   declarations: [AppComponent],

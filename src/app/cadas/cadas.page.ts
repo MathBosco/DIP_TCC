@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { FormGroup, FormBuilder } from '@angular/forms';
-import {ToastController} from '@ionic/angular';
+import { ToastController, NavController } from '@ionic/angular';
+
 
 @Component({
   selector: 'app-cadas',
@@ -10,7 +11,7 @@ import {ToastController} from '@ionic/angular';
 
 export class CadasPage implements OnInit {
  
-formGrupo : FormGroup;
+ public formGrupo : FormGroup;
 mensagem : string;
   
   constructor(private formConstrutor: FormBuilder , public toastController : ToastController) {}
@@ -50,6 +51,9 @@ mensagem : string;
 
       toast.present();
     }
+    
+    
+
   }
 
 
