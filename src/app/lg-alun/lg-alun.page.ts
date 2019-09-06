@@ -1,9 +1,10 @@
-import { CadasPage } from './../cadas/cadas.page';
-import { FormGroup, FormBuilder } from '@angular/forms';
+import { AuthProvider } from './../providers/auth';
+import { User } from './../interfaces/user';
 import { Component, OnInit } from '@angular/core';
-import {Router, RouterLink} from "@angular/router";
-import { wtfEnabled } from '@angular/core/src/profile/profile';
-import { typeWithParameters } from '@angular/compiler/src/render3/util';
+import { LoadingController, ToastController } from '@ionic/angular';
+import { AuthService } from './../services/auth.service';
+
+
 
 
 
@@ -13,27 +14,32 @@ import { typeWithParameters } from '@angular/compiler/src/render3/util';
   styleUrls: ['./lg-alun.page.scss'],
 })
 export class LgAlunPage implements OnInit {
+  userLogin: User = {};
+  private loading: any;
 
-formGrupoAlunoLogin : FormGroup;
 
-constructor(private formConstrutor :FormBuilder, private CadasPage : CadasPage) {} 
 
-  ngOnInit() {
-    console.log(this.CadasPage.formGrupo);
-    this.formGrupoAlunoLogin = this.formConstrutor.group({
-      Ra_l : [''] ,
-      Senha_l : ['']
-      
-    });
+
+  constructor(  private loadingCTRL: LoadingController, private toastCTRL: ToastController, private authService: AuthService) { }
+
+  ngOnInit() { }
+
+  async Login() {
+    await this.presentLoading();
+    await this.authService.Login(this.userLogin);
     
   }
 
-  private LoginAluno(){
 
-    const RA_l = this.formGrupoAlunoLogin.get('Ra_l').value;
-    const Senha_l = this.formGrupoAlunoLogin.get('Senha_l').value;
-    
+  async presentLoading() {
+    this.loading = await this.loadingCTRL.create({ message: 'Aguarde um segundo...' });
+    return this.loading.present();
   }
-    
-
 }
+
+
+
+
+
+
+

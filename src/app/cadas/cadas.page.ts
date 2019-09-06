@@ -1,6 +1,7 @@
+import { AuthService } from './../services/auth.service';
+import { User } from './../interfaces/user';
 import { Component, OnInit } from '@angular/core';
-import { FormGroup, FormBuilder } from '@angular/forms';
-import { ToastController, NavController } from '@ionic/angular';
+import { LoadingController, ToastController } from '@ionic/angular';
 
 
 @Component({
@@ -10,50 +11,51 @@ import { ToastController, NavController } from '@ionic/angular';
 })
 
 export class CadasPage implements OnInit {
- 
- public formGrupo : FormGroup;
-mensagem : string;
-  
-  constructor(private formConstrutor: FormBuilder , public toastController : ToastController) {}
+  userRegister: User = {};
+  private loading: any;
 
-  
-  ngOnInit() {
-    this.formGrupo = this.formConstrutor.group({
 
-      Ra : [''] , 
-      Nome : [''] , 
-      Email : [''] , 
-      EmailConfirm : [''] , 
-      Senha : [''] , 
-      SenhaConfirm : [''] , 
+  constructor(private loadingCTRL: LoadingController, private toastCTRL: ToastController, private authService: AuthService) { }
 
-    });
-  }
-  private Cadastrar(){
 
-    const RA = this.formGrupo.get('Ra').value;
-    const Nome = this.formGrupo.get('Nome').value;
-    const Email = this.formGrupo.get('Email').value;
-    const EmailConfirm = this.formGrupo.get('EmailConfirm').value;
-    const Senha = this.formGrupo.get('Senha').value;
-    const SenhaConfirm = this.formGrupo.get('SenhaConfirm').value;
+  ngOnInit() { }
 
-    this.mensagem = "Você Foi Cadastrado com Sucesso, "  + "\n Bem vindo ao DIP " + Nome + "!";
-    this.toastDuracao();
-  }
+  async Register() {
+    await this.presentLoading();
 
-   async toastDuracao(){
-      const toast = await this.toastController.create({
+    try {
+      await this.authService.Register(this.userRegister);
 
-        message: this.mensagem,
-        duration: 5000
-      });
+    } catch (error) {
+      let message: string;
 
-      toast.present();
+
+      switch (error.code) {
+        case 'auth/email-already-in-use':
+          message = 'Email já Cadastrado!'
+          break;
+
+      }
+      
+
+      this.presentToast(message);
+    } finally {
+      this.loading.dismiss();
+
+
     }
-    
-    
-
   }
 
+  async presentLoading() {
+    this.loading = await this.loadingCTRL.create({ message: 'Aguarde um segundo...' });
+    return this.loading.present();
+  }
 
+  async presentToast(message: string) {
+    const toast = await this.toastCTRL.create({
+      message,
+      duration: 2000
+    });
+    toast.present();
+  }
+}

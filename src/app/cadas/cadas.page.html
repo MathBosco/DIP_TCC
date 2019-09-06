@@ -1,77 +1,78 @@
 <ion-header>
-  <link href="https://fonts.googleapis.com/css?family=Merriweather+Sans&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Merriweather+Sans&display=swap" rel="stylesheet">
 </ion-header>
 
-<ion-content class ="background" >
+<ion-content class="background">
 
     <div class="voltar">
-        <img src = "assets\img\Icones\back-arrow.png" routerLink= "/lg-alun" routerDirection="root"  width ="30" height="30"/>
-    </div>  
+        <img src="assets\img\Icones\back-arrow.png" routerLink="/lg-alun" routerDirection="root" width="30"
+            height="30" />
+    </div>
 
-  <div class="aluno">
-      <img src = "assets\img\Icones\Aluno-Icon.png"  width ="110 " height="110"/>
-  </div>
+    <div class="aluno">
+        <img src="assets\img\Icones\Aluno-Icon.png" width="110 " height="110" />
+    </div>
 
-  <div class="alun">
-      <ion-text color = "light">Aluno</ion-text>
-      </div>
-<br>
+    <div class="alun">
+        <ion-text color="light">Aluno</ion-text>
+    </div>
+    <br>
 
-<!--Formulário-->
-<form [formGroup]="formGrupo" (submit)="Cadastrar()">
-<div>
-    <ion-item class="RA">
-        <ion-input  placeholder="RA" inputmode="text" formControlName="Ra"></ion-input>
-    </ion-item>
-</div>
+    <!--Formulário-->
 
-<br>
+    <div>
+        <ion-item class="RA">
+            <ion-input placeholder="RA" inputmode="text" [(ngModel)]="userRegister.ra"></ion-input>
+        </ion-item>
+    </div>
 
-<div>
-    <ion-item class="Nome">
-        <ion-input  placeholder="NOME COMPLETO" inputmode="text" formControlName="Nome"></ion-input>
-    </ion-item>
-</div>
+    <br>
 
-<br>
+    <div>
+        <ion-item class="Nome">
+            <ion-input placeholder="NOME COMPLETO" inputmode="text" [(ngModel)]="userRegister.nome"></ion-input>
+        </ion-item>
+    </div>
 
-<div>
-    <ion-item class="Email">
-        <ion-input  placeholder="EMAIL" inputmode="text" formControlName="Email"></ion-input>
-    </ion-item>
-</div>
+    <br>
 
-<br>
+    <div>
+        <ion-item class="Email">
+            <ion-input placeholder="EMAIL" inputmode="text" [(ngModel)]="userRegister.email"></ion-input>
+        </ion-item>
+    </div>
 
-<div>
-    <ion-item class="Email1">
-        <ion-input  placeholder="CONFIRMAR EMAIL" inputmode="text" formControlName="EmailConfirm"></ion-input>
-    </ion-item>
-</div>
+    <br>
 
-<br>
+    <div>
+        <ion-item class="Email1">
+            <ion-input placeholder="CONFIRMAR EMAIL" inputmode="text"></ion-input>
+        </ion-item>
+    </div>
 
-<div>
-    <ion-item class="Senha">
-        <ion-input  placeholder="SENHA" inputmode="text" formControlName="Senha"></ion-input>
-    </ion-item>
-</div>
+    <br>
 
-<br>
+    <div>
+        <ion-item class="Senha">
+            <ion-input placeholder="SENHA" inputmode="text" [(ngModel)]="userRegister.senha"></ion-input>
+        </ion-item>
+    </div>
 
-<div>
-    <ion-item class="Senha1">
-        <ion-input  placeholder="CONFIRMAR SENHA" inputmode="text" formControlName="SenhaConfirm" ></ion-input>
-    </ion-item>
-</div>
+    <br>
 
-<br>
+    <div>
+        <ion-item class="Senha1">
+            <ion-input placeholder="CONFIRMAR SENHA" inputmode="text"></ion-input>
+        </ion-item>
+    </div>
 
-<!--Botão Cadastrar-->
-<div>  
-    <ion-button type="Submit" class="button1"> 
-        Cadastrar
-    </ion-button>
-</div>
-</form>
+    <br>
+
+    <!--Botão Cadastrar-->
+    <div>
+        <ion-button type="Submit" class="button1" (click)="Register()">
+            Cadastrar
+        </ion-button>
+    </div>
+
 </ion-content>
