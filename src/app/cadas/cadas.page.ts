@@ -20,37 +20,49 @@ export class CadasPage implements OnInit {
 
   ngOnInit() { }
 
-  async Register() {
+
+  //Método de Registro
+  async Register(){
+
     await this.presentLoading();
 
     try {
       await this.authService.Register(this.userRegister);
-
     } catch (error) {
       let message: string;
 
+      //Switch para Erro
 
-      switch (error.code) {
-        case 'auth/email-already-in-use':
-          message = 'Email já Cadastrado!'
-          break;
+        switch(error.code){
 
-      }
-      
+          case 'auth/email-already-in-use' : 
+          message = 'E-mail Já Cadastrado!';
+          break; 
+
+          case 'auth/invalid-email' : 
+          message = 'E-mail Inválido!';
+          break; 
+
+          case 'auth/weak-password' : 
+          message = 'Senha Inválida, Deverá conter no Mínimo 6 caracteres!';
+          break; 
+          
+        }
 
       this.presentToast(message);
-    } finally {
-      this.loading.dismiss();
 
-
+    }finally {
+      this.loading.dismiss()
     }
   }
 
+  //Tela de Carregamento
   async presentLoading() {
     this.loading = await this.loadingCTRL.create({ message: 'Aguarde um segundo...' });
     return this.loading.present();
   }
 
+  //Criação do Toast
   async presentToast(message: string) {
     const toast = await this.toastCTRL.create({
       message,
