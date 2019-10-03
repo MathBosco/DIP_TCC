@@ -15,16 +15,10 @@ export class AuthService {
   }
 
   Login(user: User) {
-
     return this.afa.auth.signInWithEmailAndPassword(user.email, user.senha);
   }
 
   getAuth() {
-
     return this.afa.auth;
-
-
   }
-
-
 }

@@ -1,8 +1,4 @@
-export interface User {
-
-ra?: string ;
-nome? : string ;         
+export interface User {        
 email? : string;
 senha? : string;
-
 }

@@ -1,83 +1,90 @@
 <ion-header>
-    <link href="https://fonts.googleapis.com/css?family=Merriweather+Sans&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Merriweather+Sans&display=swap" rel="stylesheet">
 </ion-header>
 
 <!--Seta de Voltar-->
 <ion-content class="background">
-<div class="voltar">
-  <img src = "assets\img\Icones\back-arrow.png" routerLink= "/home" routerDirection="root"  width ="30" height="30"/>
-</div>
+  <div class="voltar">
+    <img src="assets\img\Icones\back-arrow.png" routerLink="/home" routerDirection="root" width="30" height="30" />
+  </div>
 
-<!--Usuário Menu-->
-<div class="table">
-  <table cellspacing="10">
-    <tr>
-      <td>
-        <ion-avatar class="noti">
-          <img src="assets\img\Icones\conversation.png">
-        </ion-avatar>
-      </td>
-      <td>&nbsp;</td>
-      <td>&nbsp;</td>
-      <td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</td>
-      <td>
-        <ion-avatar class="user">
-          <img src="assets\img\Icones\user.png">
-        </ion-avatar>
-      </td>
-    </tr>
-  </table>
-</div>
+  <!--Usuário Menu-->
+  <div class="table">
+    <table cellspacing="10">
+      <tr>
+        <td>
+          <ion-avatar class="noti">
+            <img src="assets\img\Icones\conversation.png">
+          </ion-avatar>
+        </td>
+        <td>&nbsp;</td>
+        <td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</td>
+        <td>
+          <ion-avatar class="user">
+            <img src="assets\img\Icones\user.png">
+          </ion-avatar>
+        </td>
+        <td>
+        <td>&nbsp;</td>
+        <td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</td>
+        <td>
+          <ion-avatar class="noti">
+            <img src="assets\img\Icones\Edit-Icon.png">
+          </ion-avatar>
+        </td>
+      </tr>
+    </table>
+  </div>
 
 
-<!--Avaliações-->
-<br>
-<div class="avaliacao" >
-    <ion-card class="ava" color="light"> 
+  <!--Avaliações-->
+  <br>
+  <div class="avaliacao">
+    <ion-card class="ava" color="light" >
       <ion-card-header color="primary">
         <ion-title>Availiações ></ion-title>
       </ion-card-header>
 
-    <ion-card-content>
-      <table width="360px" cellspacing="0" cellspadding="" >
-        <tr>
-          <td colspan="" width="180px">
-            <br>
-            <img class="icon" src="assets\img\Icones\pie-charts.png"> 
-          </td>  
-          <td colspan="" width="180px">
-            <br>
-              <img class="icon" src="assets\img\Icones\bar-chart.png"> 
-            </td>  
-        </tr>
-      </table>
-    </ion-card-content>  
+      <ion-card-content>
+        <table width="360px" cellspacing="0" cellspadding="">
+          <tr>
+            <td colspan="" width="180px">
+              <br>
+              <img class="icon" src="assets\img\Icones\pie-charts.png">
+            </td>
+            <td colspan="" width="180px">
+              <br>
+              <img class="icon" src="assets\img\Icones\bar-chart.png">
+            </td>
+          </tr>
+        </table>
+      </ion-card-content>
     </ion-card>
-</div>
+  </div>
 
-<!--Planejamento-->
-<br><br><br><br><br><br><br>
-<div class="planejamento" >
-  <ion-card class="pla" color="light"> 
-    <ion-card-header color="primary">
-      <ion-title>Planejamento   ></ion-title>
-    </ion-card-header>
+  <!--Planejamento-->
+  <br><br><br><br><br><br><br>
+  <div class="planejamento">
+    <ion-card class="pla" color="light" routerLink="/edit-prof" routerDirection="root">
+      <ion-card-header color="primary">
+        <ion-title>Planejamento ></ion-title>
+      </ion-card-header>
 
-  <ion-card-content>
-    <table width="360px" cellspacing="0" cellspadding="" >
-      <tr>
-        <td colspan="" width="180px">
-          <br>
-          <img class="icon" src="assets\img\Icones\calendar.png"> 
-        </td>  
-        <td colspan="" width="180px">
-          <br>
-            <img class="icon" src="assets\img\Icones\clipboard.png"> 
-          </td>  
-      </tr>
-    </table>
-  </ion-card-content>  
-  </ion-card>
-</div>
+      <ion-card-content>
+        <table width="360px" cellspacing="0" cellspadding="">
+          <tr>
+            <td colspan="" width="180px">
+              <br>
+              <img class="icon" src="assets\img\Icones\calendar.png">
+            </td>
+            <td colspan="" width="180px">
+              <br>
+              <img class="icon" src="assets\img\Icones\clipboard.png">
+            </td>
+          </tr>
+        </table>
+      </ion-card-content>
+    </ion-card>
+  </div>
 
 </ion-content>
