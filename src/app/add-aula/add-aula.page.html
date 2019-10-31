@@ -44,6 +44,7 @@
 
   <!--Criação da Aula-->
   <ion-card class="modalidade" color="light">
+    <form [formGroup] = "formGrupo">
     <ion-card-header color="primary">
       <ion-title>
         <ion-input allign="center" placeholder="Data da Aula"></ion-input>
@@ -141,6 +142,7 @@
         </tr>
       </table>
     </ion-card-content>
+  </form>
   </ion-card>
 
   <!--Botão Conclusão-->

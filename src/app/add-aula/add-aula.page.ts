@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 
+
 @Component({
   selector: 'app-add-aula',
   templateUrl: './add-aula.page.html',
