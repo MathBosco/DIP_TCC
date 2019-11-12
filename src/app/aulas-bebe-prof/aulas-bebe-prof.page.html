@@ -39,8 +39,9 @@
   </div>
 
   <br><br><br>
+
   <!--Criar Nova Aulas-->
-  <ion-card (click) =  "inserirAulas()" class="modalidade" color="light">
+  <ion-card routerLink="/add-aula" routerDirection="root" class="modalidade" color="light">
     <ion-card-header color="primary">
       <ion-title>
         Criar Nova Aula &nbsp; <ion-icon name="add-circle"></ion-icon>
@@ -48,11 +49,23 @@
     </ion-card-header>
   </ion-card>
 
-  <!--Tabela Carregamento de Aula-->
-  <ion-card *ngFor="let ArmazenamentoAula of listaAulas" class="modalidade" color="light">
+
+
+  <!--Lista Aulas-->
+  <ion-card class="modalidade" color="" *ngIf="!aulas.length">
+    <ion-card-header color="danger">
+      <ion-title>
+        Não há aulas disponíveis...
+      </ion-title>
+    </ion-card-header>
+  </ion-card>
+
+
+  <!--Quando Tiver-->
+  <ion-card class="modalidade" color="light" *ngFor="let aula of aulas">
     <ion-card-header color="primary">
       <ion-title>
-        <ion-input allign="center" placeholder="Data da Aula"></ion-input>
+        <ion-input allign="center">{{aula.data}}</ion-input>
       </ion-title>
     </ion-card-header>
     <ion-card-content>
@@ -77,76 +90,65 @@
         </tr>
         <tr>
           <td colspan="3" width="280px">
-            <ion-input type="text">{{ArmazenamentoAula.valor.exer1}}</ion-input>
+            <ion-input type="text">{{aula.exe1}}</ion-input>
           </td>
           <td colspan="3" width="80px">
           </td>
           <td colspan="3" width="280px">
-            <ion-input type="text">{{ArmazenamentoAula.valor.mate1}}</ion-input>
+            <ion-input type="text"> {{aula.mate1}} </ion-input>
           </td>
         </tr>
         <tr>
           <td colspan="3" width="280px">
-            <ion-input type="text">{{ArmazenamentoAula.valor.exer2}}</ion-input>
+            <ion-input type="text">{{aula.exe2}}</ion-input>
           </td>
           <td colspan="3" width="80px">
           </td>
           <td colspan="3" width="280px">
-            <ion-input type="text">{{ArmazenamentoAula.valor.mate2}}</ion-input>
+            <ion-input type="text"> {{aula.mate2}} </ion-input>
           </td>
         </tr>
         <tr>
           <td colspan="3" width="280px">
-            <ion-input type="text">{{ArmazenamentoAula.valor.exer3}}</ion-input>
+            <ion-input type="text">{{aula.exe3}}</ion-input>
           </td>
           <td colspan="3" width="80px">
           </td>
           <td colspan="3" width="280px">
-            <ion-input type="text">{{ArmazenamentoAula.valor.mate3}}</ion-input>
+            <ion-input type="text"> {{aula.mate3}} </ion-input>
           </td>
         </tr>
         <tr>
           <td colspan="3" width="280px">
-            <ion-input type="text">{{ArmazenamentoAula.valor.exer4}}</ion-input>
+            <ion-input type="text">{{aula.exe4}}</ion-input>
           </td>
           <td colspan="3" width="80px">
           </td>
           <td colspan="3" width="280px">
-            <ion-input type="text">{{ArmazenamentoAula.valor.mate4}}</ion-input>
+            <ion-input type="text"> {{aula.mate4}} </ion-input>
           </td>
         </tr>
         <tr>
           <td colspan="3" width="280px">
-            <ion-input type="text">{{ArmazenamentoAula.valor.exer5}}</ion-input>
+            <ion-input type="text">{{aula.exe5}}</ion-input>
           </td>
           <td colspan="3" width="80px">
           </td>
           <td colspan="3" width="280px">
-            <ion-input type="text">{{ArmazenamentoAula.valor.mate5}}</ion-input>
+            <ion-input type="text"> {{aula.mate5}} </ion-input>
           </td>
         </tr>
         <tr>
           <td colspan="3" width="280px">
-            <ion-input type="text">{{ArmazenamentoAula.valor.exer6}}</ion-input>
+            <ion-input type="text">{{aula.exe6}}</ion-input>
           </td>
           <td colspan="3" width="80px">
           </td>
           <td colspan="3" width="280px">
-            <ion-input type="text">{{ArmazenamentoAula.valor.mate6}}</ion-input>
+            <ion-input type="text"> {{aula.mate6}} </ion-input>
           </td>
         </tr>
       </table>
     </ion-card-content>
   </ion-card>
-
-  <!--Botão Conclusão-->
-  <div>
-    <ion-button type="Submit" class="button1">
-      Concluído
-    </ion-button>
-  </div>
-  <br>
 </ion-content>
-
-
-

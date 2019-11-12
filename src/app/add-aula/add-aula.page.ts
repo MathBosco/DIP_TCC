@@ -1,3 +1,4 @@
+import { Aulas } from './../interfaces/aulas';
 import { Component, OnInit } from '@angular/core';
 
 
@@ -7,6 +8,8 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./add-aula.page.scss'],
 })
 export class AddAulaPage implements OnInit {
+  private aulas : Aulas = {};
+
 
   constructor() { }
 

@@ -44,7 +44,6 @@
 
   <!--Criação da Aula-->
   <ion-card class="modalidade" color="light">
-    <form [formGroup] = "formGrupo">
     <ion-card-header color="primary">
       <ion-title>
         <ion-input allign="center" placeholder="Data da Aula"></ion-input>
@@ -72,77 +71,66 @@
         </tr>
         <tr>
           <td colspan="3" width="280px">
-            <ion-input placeholder="Exercício" type="text"></ion-input>
+            <ion-input placeholder="Exercício" type="text"[(ngModel)]="aulas.exe1"></ion-input>
           </td>
           <td colspan="3" width="80px">
           </td>
           <td colspan="3" width="280px">
-            <ion-input placeholder="Material" type="text"></ion-input>
+            <ion-input placeholder="Material" type="text" [(ngModel)]="aulas.mate1"></ion-input>
           </td>
         </tr>
         <tr>
           <td colspan="3" width="280px">
-            <ion-input placeholder="Exercício" type="text"></ion-input>
+            <ion-input placeholder="Exercício" type="text" [(ngModel)]="aulas.exe2" ></ion-input>
           </td>
           <td colspan="3" width="80px">
           </td>
           <td colspan="3" width="280px">
-            <ion-input placeholder="Material" type="text"></ion-input>
+            <ion-input placeholder="Material" type="text" [(ngModel)]="aulas.mate2"></ion-input>
           </td>
         </tr>
         <tr>
           <td colspan="3" width="280px">
-            <ion-input placeholder="Exercício" type="text"></ion-input>
+            <ion-input placeholder="Exercício" type="text" [(ngModel)]="aulas.exe3"></ion-input>
           </td>
           <td colspan="3" width="80px">
           </td>
           <td colspan="3" width="280px">
-            <ion-input placeholder="Material" type="text"></ion-input>
+            <ion-input placeholder="Material" type="text" [(ngModel)]="aulas.mate3"></ion-input>
           </td>
         </tr>
         <tr>
           <td colspan="3" width="280px">
-            <ion-input placeholder="Exercício" type="text"></ion-input>
+            <ion-input placeholder="Exercício" type="text" [(ngModel)]="aulas.exe4"></ion-input>
           </td>
           <td colspan="3" width="80px">
           </td>
           <td colspan="3" width="280px">
-            <ion-input placeholder="Material" type="text"></ion-input>
+            <ion-input placeholder="Material" type="text" [(ngModel)]="aulas.mate4"></ion-input>
           </td>
         </tr>
         <tr>
           <td colspan="3" width="280px">
-            <ion-input placeholder="Exercício" type="text"></ion-input>
+            <ion-input placeholder="Exercício" type="text" [(ngModel)]="aulas.exe5"></ion-input>
           </td>
           <td colspan="3" width="80px">
           </td>
           <td colspan="3" width="280px">
-            <ion-input placeholder="Material" type="text"></ion-input>
+            <ion-input placeholder="Material" type="text" [(ngModel)]="aulas.mate5"></ion-input>
           </td>
         </tr>
         <tr>
           <td colspan="3" width="280px">
-            <ion-input placeholder="Exercício" type="text"></ion-input>
+            <ion-input placeholder="Exercício" type="text" [(ngModel)]="aulas.exe6"></ion-input>
           </td>
           <td colspan="3" width="80px">
           </td>
           <td colspan="3" width="280px">
-            <ion-input placeholder="Material" type="text"></ion-input>
-          </td>
-        </tr>
-        <tr>
-          <td colspan="3" width="280px">
-            <ion-input placeholder="Exercício" type="text"></ion-input>
-          </td>
-          <td colspan="3" width="80px">
-          </td>
-          <td colspan="3" width="280px">
-            <ion-input placeholder="Material" type="text"></ion-input>
+            <ion-input placeholder="Material" type="text" [(ngModel)]="aulas.mate6"></ion-input>
           </td>
         </tr>
       </table>
     </ion-card-content>
-  </form>
   </ion-card>
 
   <!--Botão Conclusão-->

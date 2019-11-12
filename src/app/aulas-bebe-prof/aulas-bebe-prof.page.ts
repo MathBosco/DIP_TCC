@@ -1,9 +1,8 @@
-import { ArmazenamentoAula } from './../model/armazenamento-aula';
-import { Router } from '@angular/router';
-import { ToastController } from '@ionic/angular';
-import { AulasStorageService } from './../providers/aulas/aulas-storage.service';
+import { AulasService } from './../services/aulas.service';
+import { Aulas } from './../interfaces/aulas';
 import { Component, OnInit } from '@angular/core';
-import { NavigationExtras } from '@angular/router';
+import { Subscription } from 'rxjs';
+
 
 
 @Component({
@@ -12,39 +11,18 @@ import { NavigationExtras } from '@angular/router';
   styleUrls: ['./aulas-bebe-prof.page.scss'],
 })
 export class AulasBebeProfPage implements OnInit {
-  listaAulas: ArmazenamentoAula[];
+  public aulas = new Array<Aulas>();
+  private aulasSubscription: Subscription;
 
-  constructor(
-    private AulasStorageService: AulasStorageService,
-    private rota: Router,
-    private toast: ToastController
-  ) { }
+  constructor(private aulasService : AulasService) { 
+    this.aulasSubscription = this.aulasService.getAulas().subscribe(data => {
+      this.aulas = data;
+    })
+  }
 
   ngOnInit() { }
 
-
-  //Atualiza a Lista de Aulas
-  public atualizarListaAulas() {
-    this.AulasStorageService.listarAulas().then(lista => {
-      this.listaAulas = lista;
-    });
-  }
-
-  //Roda na Transição de Pagina
-  ionViewDidEnter() {
-    this.atualizarListaAulas();
-  }
-
-
-  //Inserir Contato
-  inserirAulas() {
-    const navigationExtras: NavigationExtras = {
-      state: {
-        operacao: 'inserir'
-      }
-    };
-
-    //Redirecionamento com navigationExtras por parâmetro
-    this.rota.navigate(['add-aula'], navigationExtras);
+  ngOnDestroy() {
+    this.aulasSubscription.unsubscribe();
   }
 }

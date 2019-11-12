@@ -17,8 +17,8 @@ const routes: Routes = [
   { path: 'edit-prof', loadChildren: './edit-prof/edit-prof.module#EditProfPageModule' },
   { path: 'modal-prof', loadChildren: './modal-prof/modal-prof.module#ModalProfPageModule' },
   { path: 'aulas-bebe-prof', loadChildren: './aulas-bebe-prof/aulas-bebe-prof.module#AulasBebeProfPageModule' },
-  { path: 'add-aula', loadChildren: './add-aula/add-aula.module#AddAulaPageModule' },
-  { path: 'add-aula/:id', loadChildren: './add-aula/add-aula.module#AddAulaPageModule' },
+  { path: 'add-aula', loadChildren: './add-aula/add-aula.module#AddAulaPageModule', canActivate: [AuthGuard]},
+  { path: 'add-aula/:id', loadChildren: './add-aula/add-aula.module#AddAulaPageModule', canActivate: [AuthGuard] },
 
 
 
