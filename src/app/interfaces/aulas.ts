@@ -1,6 +1,6 @@
 export interface Aulas {
 
-id?: string;
+userId?: string;
 
 data? : string;
 
@@ -18,6 +18,7 @@ mate4? : string;
 mate5? : string;
 mate6? : string;
 
+createdAt? : number;
 
 
 

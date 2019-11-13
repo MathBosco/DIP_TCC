@@ -8,6 +8,7 @@ import { IonicModule } from '@ionic/angular';
 
 import { AddAulaPage } from './add-aula.page';
 
+
 const routes: Routes = [
   {
     path: '',

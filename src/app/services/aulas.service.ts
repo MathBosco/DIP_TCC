@@ -27,9 +27,17 @@ export class AulasService {
     )
   }
 
-  addAula(aulas: Aulas) { }
+  addAula(aulas: Aulas) {
 
-  getAula(id: string) { }
+    return this.aulasCollection.add(aulas);
+
+   }
+
+  getAula(id: string) {
+
+    return this.aulasCollection.doc<Aulas>(id).valueChanges();
+
+   }
 
   updateAulas(id: string, aulas: Aulas) { }
 

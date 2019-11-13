@@ -7,7 +7,7 @@
   <div class="table1">
     <!--Seta de Voltar-->
     <div class="voltar">
-      <img src="assets\img\Icones\back-arrow.png" routerLink="/home" routerDirection="root" width="30" height="30" />
+      <img src="assets\img\Icones\back-arrow.png" routerLink="/aulas-bebe-prof" routerDirection="root" width="30" height="30" />
     </div>
 
     <!--Usuário Menu-->
@@ -46,7 +46,7 @@
   <ion-card class="modalidade" color="light">
     <ion-card-header color="primary">
       <ion-title>
-        <ion-input allign="center" placeholder="Data da Aula"></ion-input>
+        <ion-input allign="center" [(ngModel)]="aulas.data"></ion-input>
       </ion-title>
     </ion-card-header>
     <ion-card-content>
@@ -135,7 +135,7 @@
 
   <!--Botão Conclusão-->
   <div>
-    <ion-button type="Submit" class="button1">
+    <ion-button (click) = "salvarAula()" type="Submit" class="button1">
       Concluído
     </ion-button>
   </div>
